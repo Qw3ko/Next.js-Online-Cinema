@@ -7,9 +7,9 @@ import logoImage from '@/assets/images/logo.svg'
 
 import { onlyText } from '../string/clearText'
 
-import { ISeo } from './meta.interface'
+import { ISeo } from './Meta.interface'
 
-const Meta: FC<ISeo> = ({ title, description, image, children }) => {
+export const Meta: FC<ISeo> = ({ title, description, image, children }) => {
 	const { asPath } = useRouter()
 	const currentUrl = `${process.env.APP_URL}${asPath}`
 
@@ -35,7 +35,7 @@ const Meta: FC<ISeo> = ({ title, description, image, children }) => {
 					/>
 				</Head>
 			) : (
-				<MetaNoIndex title={title} />
+				<meta name="robots" content="noindex, nofollow" />
 			)}
 			{children}
 		</>
