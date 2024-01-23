@@ -1,3 +1,4 @@
+import { MetaNoIndex } from '.'
 import { siteName, titleMerge } from 'config/seo.config'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
@@ -7,9 +8,14 @@ import logoImage from '@/assets/images/logo.svg'
 
 import { onlyText } from '../string/clearText'
 
-import { ISeo } from './Meta.interface'
+import { ISeo } from './Meta.types'
 
-export const Meta: FC<ISeo> = ({ title, description, image, children }) => {
+export const Meta: FC<ISeo> = ({
+	title,
+	description,
+	image = null,
+	children,
+}) => {
 	const { asPath } = useRouter()
 	const currentUrl = `${process.env.APP_URL}${asPath}`
 
@@ -35,11 +41,9 @@ export const Meta: FC<ISeo> = ({ title, description, image, children }) => {
 					/>
 				</Head>
 			) : (
-				<meta name="robots" content="noindex, nofollow" />
+				<MetaNoIndex title={title} />
 			)}
 			{children}
 		</>
 	)
 }
-
-export default Meta
