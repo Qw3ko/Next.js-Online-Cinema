@@ -6,7 +6,7 @@ import { FC } from 'react'
 import MaterialIcon from '@/components/ui/MaterialIcon'
 
 import styles from './Menu.module.scss'
-import { IMenuItem } from './menu.interface'
+import { IMenuItem } from './menu.types'
 
 const MenuItem: FC<{ item: IMenuItem }> = ({ item }) => {
 	const { asPath } = useRouter()
