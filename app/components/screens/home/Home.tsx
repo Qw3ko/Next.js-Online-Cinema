@@ -2,7 +2,7 @@ import { FC } from 'react'
 
 import Heading from '@/components/ui/heading/Heading'
 
-import Meta from '@/utils/meta/Meta'
+import { Meta } from '@/utils/meta'
 
 import { IHome } from './Home.interface'
 
