@@ -1,6 +1,6 @@
 import { NextPageAuth } from 'providers/AuthProvider/auth.types'
 
-import Admin from '@/components/screens/admin/Admin'
+import Admin from '@/components/screens/admin/home/Admin'
 
 const AdminPanel: NextPageAuth = () => {
 	return <Admin />
