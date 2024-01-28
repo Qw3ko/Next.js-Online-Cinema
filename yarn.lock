@@ -507,7 +507,7 @@
     javascript-natural-sort "0.7.1"
     lodash "4.17.21"
 
-"@types/draft-js@*", "@types/draft-js@^0.11.9":
+"@types/draft-js@*":
   version "0.11.9"
   resolved "https://registry.yarnpkg.com/@types/draft-js/-/draft-js-0.11.9.tgz#b7535fb2511e8b8c8e33ffac2199a5f2988f4fd5"
   integrity sha512-cQJBZjjIlGaPA1tOY+wGz2KhlPtAAZOIXpUvGPxPRw5uzZ2tcj8m6Yu1QDV9YgP36+cqE3cUvgkARBzgUiuI/Q==
@@ -515,10 +515,18 @@
     "@types/react" "*"
     immutable "~3.7.4"
 
-"@types/draftjs-to-html@^0.8.1":
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/@types/draftjs-to-html/-/draftjs-to-html-0.8.1.tgz#0800a4f6ff19ece49b6a337bfa8b39ed3d08a5fa"
-  integrity sha512-NBkphQs+qZ/sAz/j1pCUaxkPAOx00LTsE88aMSSfcvK+UfCpjHJDqIMCkm6wKotuJvY5w0BtdRazQ0sAaXzPdg==
+"@types/draft-js@^0.11.17":
+  version "0.11.17"
+  resolved "https://registry.yarnpkg.com/@types/draft-js/-/draft-js-0.11.17.tgz#32a68cac3e4e3d5c8f2cd5e22409d7dbf28887f1"
+  integrity sha512-th0OwSPftG2r5rvGxS7nt8I7hcWMlrQ9OJcNx6MdXAwO797W78IGEsGWonO+turVBWEd3qylZRGBVtpEX9vSYQ==
+  dependencies:
+    "@types/react" "*"
+    immutable "~3.7.4"
+
+"@types/draftjs-to-html@^0.8.4":
+  version "0.8.4"
+  resolved "https://registry.yarnpkg.com/@types/draftjs-to-html/-/draftjs-to-html-0.8.4.tgz#b25ce6145973c431369ec011e75bebf9c78d533e"
+  integrity sha512-5FZcjFoJL57N/IttLCTCNI0krX+181oCl5hf76u3TqPkqBAphHrJAO9ReYesx9138kcObaYmpnWC2Yrqxoqd2Q==
   dependencies:
     "@types/draft-js" "*"
 
@@ -530,10 +538,10 @@
     "@types/react" "*"
     hoist-non-react-statics "^3.3.0"
 
-"@types/html-to-draftjs@^1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@types/html-to-draftjs/-/html-to-draftjs-1.4.0.tgz#bfd712d3c5993e0644b76d2654adeae214678fae"
-  integrity sha512-w7Te62TAk2xkl+f/PRepVfaVbsArRYRACqH7Rv9H97gKqglQye3Cf8EArsKuSsN7vW6/zf1kTCsm/jnSR0gDQA==
+"@types/html-to-draftjs@^1.4.3":
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/@types/html-to-draftjs/-/html-to-draftjs-1.4.3.tgz#57d33d999cdf3f688d9e08cdaa68669a26908b79"
+  integrity sha512-8TAgtzFA/sfwjGNXJ7Zod5tgnqsfJFQZYB8Nmu9GIoF7AVSwRm2quF1Ve09dHgHxSVsTSSy2diZSVdeSvTe7vg==
   dependencies:
     "@types/draft-js" "*"
 
@@ -572,10 +580,10 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.4.tgz#fcf7205c25dff795ee79af1e30da2c9790808f11"
   integrity sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==
 
-"@types/react-draft-wysiwyg@^1.13.4":
-  version "1.13.4"
-  resolved "https://registry.yarnpkg.com/@types/react-draft-wysiwyg/-/react-draft-wysiwyg-1.13.4.tgz#df951c76afb47e311061d363f41a10c76de04ac8"
-  integrity sha512-wasD1t78JDmQvdPDRPf/mf5FSHMlncunW0F6KMOKB3awzi3Wi21yHMGsRAUOkfTr3R8F+yceG8fSLz0kYWu/QA==
+"@types/react-draft-wysiwyg@^1.13.8":
+  version "1.13.8"
+  resolved "https://registry.yarnpkg.com/@types/react-draft-wysiwyg/-/react-draft-wysiwyg-1.13.8.tgz#8549922468340dd6f820615a033dc6b34f3c317a"
+  integrity sha512-qo0vIHjqAYq3Hz93Td3ecNodgVjKsvrWkBJ6mZXJSUmQzrQ5Fu7NS9oV5PXnVbnuqPoJLALbCSiz8UCksLribg==
   dependencies:
     "@types/draft-js" "*"
     "@types/react" "*"
@@ -2570,10 +2578,10 @@ react-dom@17.0.2:
     object-assign "^4.1.1"
     scheduler "^0.20.2"
 
-react-draft-wysiwyg@^1.14.7:
-  version "1.14.7"
-  resolved "https://registry.yarnpkg.com/react-draft-wysiwyg/-/react-draft-wysiwyg-1.14.7.tgz#5d27fe8ad87de7c692dad739b8787f3ac1f3c24e"
-  integrity sha512-D4X8F/ourvQZuqHzCQ6Vs6Tnt6TbGH58kvHQxC+aZGq+45ko2EyatL6G5C/paMaNKDZq2JRe7yAzykneMLpNOg==
+react-draft-wysiwyg@^1.15.0:
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/react-draft-wysiwyg/-/react-draft-wysiwyg-1.15.0.tgz#d5b4173991033859b9e161c883889ddc00909a57"
+  integrity sha512-p1cYZcWc6/ALFBVksbFoCM3b29fGQDlZLIMrXng0TU/UElxIOF2/AWWo4L5auIYVhmqKTZ0NkNjnXOzGGuxyeA==
   dependencies:
     classnames "^2.2.6"
     draftjs-utils "^0.10.2"
