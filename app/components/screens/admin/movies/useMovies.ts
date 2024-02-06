@@ -1,4 +1,5 @@
 import { getAdminUrl } from 'config/url.config'
+import { useRouter } from 'next/router'
 import { ChangeEvent, useMemo, useState } from 'react'
 import { useMutation, useQuery } from 'react-query'
 import { toastr } from 'react-redux-toastr'
@@ -11,7 +12,6 @@ import { MovieService } from '@/services/movie.service'
 
 import { getGenresList } from '@/utils/movie/getGenresList'
 import { toastError } from '@/utils/toast-error'
-import { useRouter } from 'next/router'
 
 export const useMovies = () => {
 	const [searchTerm, setSearchTerm] = useState('')
@@ -47,15 +47,15 @@ export const useMovies = () => {
 	const { push } = useRouter()
 
 	const { mutateAsync: createAsync } = useMutation(
-		'create genre',
+		'create movie',
 		() => MovieService.create(),
 		{
 			onError: (error) => {
-				toastError(error, 'Create movieMovieService')
+				toastError(error, 'Create movie')
 			},
 			onSuccess: ({ data: _id }) => {
-				toastr.success('Create movieMovieService', 'Create was successful')
-				push(getAdminUrl(`movieMovieService/edit/${_id}`))
+				toastr.success('Create movie', 'Create was successful')
+				push(getAdminUrl(`movie/edit/${_id}`))
 			},
 		}
 	)
