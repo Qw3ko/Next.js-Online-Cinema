@@ -1,7 +1,7 @@
 export interface IGalleryItem {
 	posterPath: string
 	name: string
-	link: string
+	url: string
 	content?: {
 		title: string
 		subTitle?: string
@@ -10,5 +10,5 @@ export interface IGalleryItem {
 
 export interface IGalleryItemProps {
 	item: IGalleryItem
-	variant: 'vertical' | 'horizontal'
+	variant: 'horizontal' | 'vertical'
 }

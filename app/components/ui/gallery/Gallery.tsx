@@ -8,7 +8,7 @@ const Gallery: FC<{ items: IGalleryItem[] }> = ({ items }) => {
 	return (
 		<div className={styles.gallery}>
 			{items.map((item) => (
-				<GalleryItem key={item.link} item={item} variant="vertical" />
+				<GalleryItem key={item.url} item={item} variant="vertical" />
 			))}
 		</div>
 	)
