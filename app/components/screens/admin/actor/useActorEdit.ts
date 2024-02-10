@@ -12,7 +12,7 @@ import { toastError } from '@/utils/toast-error'
 import { IActorEditInput } from './actor-edit.interface'
 
 export const useActorEdit = (setValue: UseFormSetValue<IActorEditInput>) => {
-	const { push, query } = useRouter()
+	const { query, push } = useRouter()
 
 	const actorId = String(query.id)
 
@@ -20,12 +20,12 @@ export const useActorEdit = (setValue: UseFormSetValue<IActorEditInput>) => {
 		['actor', actorId],
 		() => ActorService.getById(actorId),
 		{
-			onSuccess: ({ data }) => {
+			onSuccess({ data }) {
 				getKeys(data).forEach((key) => {
 					setValue(key, data[key])
 				})
 			},
-			onError: (error) => {
+			onError(error) {
 				toastError(error, 'Get actor')
 			},
 			enabled: !!query.id,
@@ -36,7 +36,7 @@ export const useActorEdit = (setValue: UseFormSetValue<IActorEditInput>) => {
 		'update actor',
 		(data: IActorEditInput) => ActorService.update(actorId, data),
 		{
-			onError: (error) => {
+			onError(error) {
 				toastError(error, 'Update actor')
 			},
 			onSuccess() {
