@@ -16,16 +16,17 @@ const FreshPage: NextPage<{ movies: IMovie[] }> = ({ movies }) => {
 	)
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
 	try {
-		const { data: movies } = await MovieService.getAll()
+		const { data: movies } = await MovieService.getMovies()
 
 		return {
-			props: {
-				movies,
-			},
+			props: { movies },
+			revalidate: 60,
 		}
-	} catch (error) {
+	} catch (e) {
+		// console.log(errorCatch(e))
+
 		return {
 			notFound: true,
 		}
