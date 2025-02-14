@@ -11,13 +11,22 @@ const nextConfig = {
 		return [
 			{
 				source: '/api/:path*',
-				destination: `http://localhost:4200/api/:path*`,
+				destination: `https://online-cinema-server-production-7284.up.railway.app/api/:path*`,
 			},
 			{
 				source: '/uploads/:path*',
-				destination: `http://localhost:4200/uploads/:path*`,
+				destination: `https://online-cinema-server-production-7284.up.railway.app/uploads/:path*`,
 			},
 		]
+	},
+	images: {
+		domains: ['my-static-files.storage.yandexcloud.net'],
+		remotePatterns: [
+			{
+				protocol: 'https',
+				hostname: 'my-static-files.storage.yandexcloud.net',
+			},
+		],
 	},
 }
 
